@@ -14,7 +14,7 @@ public:
 	//std::string irany;
 	bool _checked;
     bool _striped;
-	int sorszam, x_eddig, y_eddig, _menu_tipus;
+	int sorszam, x_win, y_win, _menu_tipus;
     Widget(int x, int y, int sx, int sy, int menu_tipus);
     virtual bool is_selected(int mouse_x, int mouse_y);
     virtual void draw() const = 0;
