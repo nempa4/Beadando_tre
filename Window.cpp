@@ -16,7 +16,7 @@ Window::Window(int X, int Y) :
 
 void Window::event_loop()
 {
-	string hozzaadando;
+    string hozzaadando;
     event ev;
     int focus = -1;
     while((gin >> ev) && (ev.keycode != key_escape))
@@ -40,6 +40,14 @@ void Window::event_loop()
                         widgets[i]->remove_focus();
                     }
                 }
+            }
+        }
+        for (size_t i=0; i<widgets.size(); i++)
+        {
+            if (ev.type == ev_key)
+            {
+                widgets[i]->handle(ev);
+
             }
         }
 

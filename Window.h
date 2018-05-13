@@ -6,7 +6,8 @@
 #include "widgets.hpp"
 
 
-class Window {
+class Window
+{
 public:
 
 protected:
@@ -14,7 +15,7 @@ protected:
 
 
 public:
-	std::vector<Widget*> widgets;
+    std::vector<Widget*> widgets;
     Window(int X, int Y) ;
     void event_loop() ;
 };

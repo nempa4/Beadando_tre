@@ -14,17 +14,17 @@ protected:
 public:
     Push_button(int x, int y, int sx, int sy, std::string esemeny, int menu_tipus);
     virtual bool is_focused();
-    virtual std::string erteke(){}
+    virtual std::string erteke() {}
     virtual void draw() const;
     virtual void handle(genv::event ev);
     virtual void action()=0;
-	void set_focus()
+    void set_focus()
     {
         _focused = true;
     }
     void remove_focus()
     {
-		_focused = false;
+        _focused = false;
     }
     virtual bool focusable() const
     {
